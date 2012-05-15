@@ -2,7 +2,7 @@
 #__________________________________________________________
 # Author:     phillips321 contact through phillips321.co.uk
 # License:    CC BY-SA 3.0
-# Use:        Password Generator for oclHashcat
+# Use:        Hash generator
 # Released:   www.phillips321.co.uk
 # Thanks to:  atom for the origional script which i have used
 # Dependencies:
@@ -30,7 +30,37 @@ use Encode;
 my @modes = (0, 11, 21, 100, 101, 111, 112, 121, 122, 131, 132, 300, 400, 500, 900, 1000, 1100, 1400, 1500, 1600, 1700, 1722, 2100, 2400, 2600, 2611, 2711, 2811, 3000, 3100);
 
 if (scalar @ARGV < 1){die ("usage: $0 [mode] ['password' or stdin]
-Depreciated, please use hash-generator.pl
+* Hash types:
+    0 = MD5
+   11 = Joomla
+   21 = osCommerce, xt:Commerce
+  100 = SHA1
+  101 = nsldap, SHA-1(Base64), Netscape LDAP SHA
+  111 = nsldaps, SSHA-1(Base64), Netscape LDAP SSHA
+  112 = Oracle 11g
+  121 = SMF > v1.1
+  122 = OSX v10.4, v10.5, v10.6
+  131 = MSSQL(2000)
+  132 = MSSQL(2005)
+  300 = MySQL
+  400 = phpass, MD5(Wordpress), MD5(phpBB3)
+  500 = md5crypt, MD5(Unix), FreeBSD MD5, Cisco-IOS MD5
+  900 = MD4
+ 1000 = NTLM
+ 1100 = Domain Cached Credentials, mscash
+ 1400 = SHA256
+ 1500 = descrypt, DES(Unix), Traditional DES
+ 1600 = md5apr1, MD5(APR), Apache MD5
+ 1700 = SHA512
+ 1722 = OSX v10.7
+ 2100 = Domain Cached Credentials2, mscash2
+ 2400 = Cisco-PIX MD5
+ 2600 = Double MD5
+ 2611 = vBulletin < v3.8.5
+ 2711 = vBulletin > v3.8.5
+ 2811 = IPB2+, MyBB1.2+
+ 3000 = LM
+ 3100 = Oracle 7-10g, DES(Oracle)
 ");}
 
 my $mode = shift @ARGV;
