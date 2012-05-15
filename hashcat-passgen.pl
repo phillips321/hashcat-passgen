@@ -4,11 +4,13 @@
 # License:    CC BY-SA 3.0
 # Use:        Password Generator for oclHashcat
 # Released:   www.phillips321.co.uk
+# Thanks to:  atom for the origional script which i have used
 # Dependencies:
 #	see header below
 # ToDo:
 #	Make code neater
 # ChangeLog:
+#	v0.2 - thanks to atom
 #	v0.1 - first release
 
 use strict;
