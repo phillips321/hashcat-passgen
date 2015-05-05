@@ -1,0 +1,1 @@
+This allows password generation for oclHashcat of all the different modes see more info at [phillips321.co.uk](http://www.phillips321.co.uk)
